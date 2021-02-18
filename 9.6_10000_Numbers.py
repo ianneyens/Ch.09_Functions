@@ -1,4 +1,4 @@
-'''
+"""
 10,000 NUMBERS
 --------------
 
@@ -18,14 +18,21 @@ print(my_list)
 OUTPUT
 ------
 [2,5,1,6,3] #something like this 
-'''
+"""
+import random
 
 
+def create_list(size):
+    list = []
+    for i in range(size):
+        list.append(random.randint(1, 6))
+    return list
 
 
+my_list = create_list(5)
+print(my_list)
 
-
-'''
+"""
 Function #2: Write a function called count_list that takes
 in a list and a number. Have the function return the number
 of times the specified number appears in the list. Once you've
@@ -41,13 +48,18 @@ print(count)
 OUTPUT
 ------
 3 
-'''
+"""
 
 
+def count_list(list, number):
+    count = 0
+    for i in range(len(list)):
+        if number == list[i]:
+            count += 1
+    return count
 
 
-
-'''
+"""
 Function #3: Write a function called average_list that returns the 
 average of the list passed into it. Once you've finished writing your
 function, copy and paste the following code after it and make sure it
@@ -62,14 +74,15 @@ print(avg)
 OUTPUT
 ------
 2.0
-'''
+"""
 
 
-
-
-
-
-
+def average_list(list):
+    total = 0
+    for num in list:
+        total += num
+    average = total/len(list)
+    return f"{average:.2f}"
 
 
 '''
@@ -80,5 +93,14 @@ Now that the functions have been created, use them all in a main program that wi
 '''
 
 
+def main():
+    my_list = create_list(10000)
+    for i in range(1,7):
+        count = count_list(my_list,i)
+        print("There are",count,"number of", i, "s.")
+        print()
+    print(average_list(my_list))
 
 
+if __name__ == "__main__":
+    main()
