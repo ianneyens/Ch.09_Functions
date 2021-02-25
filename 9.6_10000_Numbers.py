@@ -51,12 +51,14 @@ OUTPUT
 """
 
 
-def count_list(list, num):
-    sum = 0
+def count_numbers(list, num):
+    count = 0
     for i in range(len(list)):
         if list[i] == num:
-            sum += 1
-    return sum
+            count += 1
+    return count
+
+
 
 
 
@@ -79,12 +81,12 @@ OUTPUT
 """
 
 
-def average_list(list):
+def average(list):
     total = 0
-    for num in list:
-        total += num
-    average = total/len(list)
-    return f"{average:.2f}"
+    for i in range(len(list)):
+        total += list[i]
+    avg = total/len(list)
+    return avg
 
 
 '''
@@ -95,9 +97,12 @@ Now that the functions have been created, use them all in a main program that wi
 '''
 
 
-my_list = create_list(10000)
-for i in range(1, 7):
-    count = count_list(my_list, i)
-    print("There are", count, "number of", i, "s.")
-    print()
-print(average_list(my_list))
+def main():
+    full_list = create_list(10000)
+    for i in range(1, 7):
+        print("There are", count_numbers(full_list, i), "of", i)
+    print("The average of the list is", average(full_list))
+
+
+if __name__ == "__main__":
+    main()
