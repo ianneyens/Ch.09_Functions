@@ -51,12 +51,14 @@ OUTPUT
 """
 
 
-def count_list(list, number):
-    count = 0
+def count_list(list, num):
+    sum = 0
     for i in range(len(list)):
-        if number == list[i]:
-            count += 1
-    return count
+        if list[i] == num:
+            sum += 1
+    return sum
+
+
 
 
 """
@@ -93,14 +95,9 @@ Now that the functions have been created, use them all in a main program that wi
 '''
 
 
-def main():
-    my_list = create_list(10000)
-    for i in range(1,7):
-        count = count_list(my_list,i)
-        print("There are",count,"number of", i, "s.")
-        print()
-    print(average_list(my_list))
-
-
-if __name__ == "__main__":
-    main()
+my_list = create_list(10000)
+for i in range(1, 7):
+    count = count_list(my_list, i)
+    print("There are", count, "number of", i, "s.")
+    print()
+print(average_list(my_list))
