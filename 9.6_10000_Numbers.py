@@ -58,11 +58,6 @@ def count_numbers(list, num):
             count += 1
     return count
 
-
-
-
-
-
 """
 Function #3: Write a function called average_list that returns the 
 average of the list passed into it. Once you've finished writing your
@@ -87,7 +82,6 @@ def average(list):
         total += list[i]
     avg = total/len(list)
     return avg
-
 
 '''
 Now that the functions have been created, use them all in a main program that will:
