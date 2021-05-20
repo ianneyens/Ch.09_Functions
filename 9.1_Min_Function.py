@@ -1,4 +1,4 @@
-'''
+"""
 MINI FUNCTION
 ------------
 Write a function called min that will take three numbers as parameters 
@@ -25,7 +25,7 @@ A
 The function should return the value, not print the value. 
 Also, while there is a min function built into Python, don't use it. 
 Please use if statements and practice creating it yourself.
-'''
+"""
 
 
 def mini(a, b, c):

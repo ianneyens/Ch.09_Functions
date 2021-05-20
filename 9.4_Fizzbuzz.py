@@ -1,4 +1,4 @@
-'''
+"""
 FIZZBUZZ
 --------
 The "Fizz-Buzz test" is an interview question designed to help filter out the 99.5% 
@@ -33,7 +33,7 @@ fizzbuzz
 
 
 The classic test is to use the numbers 1-100 so make sure you test that with your function.
-'''
+"""
 
 
 def fizzbuzz(endpoint):
